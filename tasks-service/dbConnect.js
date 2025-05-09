@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
+require('dotenv').config()
 
 function check(){
 
-    mongoose.connect('mongodb+srv://ameurelmoukh05:vrScV1KCrFynIGIB@cluster0.xupwd.mongodb.net/projectManagement?retryWrites=true&w=majority&appName=Cluster0')
+    mongoose.connect('mongodb://localhost:27017/taskDB')
     .then(()=>console.log('connected'))
     .catch((error)=>console.log(error))
 }
